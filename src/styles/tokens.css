@@ -1,0 +1,68 @@
+/*
+ * Visor Aero - Design tokens
+ * Apariencia de laboratorio de ingenieria: minimalista, profesional.
+ * Sin sombras, sin degradados, sin colores llamativos.
+ */
+:root {
+  --color-bg: #fafafa;
+  --color-surface: #ffffff;
+  --color-surface-hover: #f0f0f0;
+  --color-surface-active: #eaeaea;
+
+  --color-text: #212121;
+  --color-text-secondary: #666666;
+  --color-text-muted: #9e9e9e;
+
+  --color-border: #e0e0e0;
+
+  --btn-primary-bg: #111111;
+  --btn-primary-text: #ffffff;
+  --btn-primary-bg-hover: #000000;
+  --btn-secondary-bg: #ffffff;
+  --btn-secondary-text: #212121;
+  --btn-secondary-border: var(--color-border);
+
+  --radius-sm: 4px;
+  --radius-md: 6px;
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 28px;
+
+  --font-sans: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial,
+    sans-serif;
+  --font-size-xs: 11px;
+  --font-size-sm: 12px;
+  --font-size-md: 13px;
+  --font-size-lg: 15px;
+  --line-height: 1.5;
+
+  --sidebar-width: 280px;
+  --border-width: 1px;
+
+  --transition-fast: 150ms ease;
+  --transition: 200ms ease;
+}
+
+[data-theme="dark"] {
+  --color-bg: #141414;
+  --color-surface: #1c1c1c;
+  --color-surface-hover: #242424;
+  --color-surface-active: #2a2a2a;
+
+  --color-text: #f5f5f5;
+  --color-text-secondary: #b0b0b0;
+  --color-text-muted: #7a7a7a;
+
+  --color-border: #2a2a2a;
+
+  --btn-primary-bg: #f5f5f5;
+  --btn-primary-text: #141414;
+  --btn-primary-bg-hover: #ffffff;
+  --btn-secondary-bg: #1c1c1c;
+  --btn-secondary-text: #f5f5f5;
+  --btn-secondary-border: var(--color-border);
+}

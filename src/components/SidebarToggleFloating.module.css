@@ -1,0 +1,23 @@
+.floating {
+  position: absolute;
+  top: var(--space-4);
+  left: var(--space-4);
+  width: 36px;
+  height: 36px;
+  background: var(--color-surface);
+  border: var(--border-width) solid var(--color-border);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  color: var(--color-text-secondary);
+  z-index: 10;
+  transition: background-color var(--transition-fast), border-color var(--transition-fast);
+}
+
+.floating:hover {
+  background: var(--color-surface-hover);
+  border-color: var(--color-text-muted);
+}

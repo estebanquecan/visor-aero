@@ -1,0 +1,12 @@
+[
+  {
+    "id": "guia-policia",
+    "name": "Guia Policia",
+    "category": "General",
+    "description": "",
+    "thumbnail": "/thumbnails/guia-policia.webp",
+    "viewer": "/rhino/Guia%20policia.3dm",
+    "download": "/rhino/Guia%20policia.3dm",
+    "tags": []
+  }
+]

@@ -1,0 +1,118 @@
+.toggleBtn {
+  width: 100%;
+  padding: var(--space-3);
+  background: var(--btn-secondary-bg);
+  color: var(--btn-secondary-text);
+  border: var(--border-width) solid var(--btn-secondary-border);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  transition: background-color var(--transition-fast), border-color var(--transition-fast),
+    color var(--transition-fast);
+}
+
+.toggleBtn:hover {
+  border-color: var(--color-text-muted);
+  background: var(--color-surface-hover);
+}
+
+.toggleBtn.active {
+  background: var(--btn-primary-bg);
+  color: var(--btn-primary-text);
+  border-color: var(--btn-primary-bg);
+}
+
+.hint {
+  margin: var(--space-2) 0 0;
+  font-size: var(--font-size-xs);
+  line-height: var(--line-height);
+  color: var(--color-text-muted);
+}
+
+.empty {
+  margin: var(--space-3) 0 0;
+  padding: var(--space-2) 0;
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+}
+
+.list {
+  list-style: none;
+  margin: var(--space-3) 0 0;
+  padding: 0;
+  max-height: 260px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-3);
+  background: var(--color-surface);
+  border: var(--border-width) solid var(--color-border);
+  border-radius: var(--radius-sm);
+  transition: background-color var(--transition-fast), border-color var(--transition-fast);
+}
+
+.item:hover {
+  border-color: var(--color-text-muted);
+  background: var(--color-surface-hover);
+}
+
+.index {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  flex-shrink: 0;
+}
+
+.distance {
+  flex: 1;
+  font-size: var(--font-size-sm);
+  color: var(--color-text);
+  font-variant-numeric: tabular-nums;
+}
+
+.removeBtn {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: var(--border-width) solid var(--color-border);
+  border-radius: var(--radius-sm);
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  font-size: var(--font-size-xs);
+  line-height: 1;
+  transition: background-color var(--transition-fast), border-color var(--transition-fast);
+}
+
+.removeBtn:hover {
+  border-color: var(--color-text-muted);
+  background: var(--color-surface-hover);
+}
+
+.clearBtn {
+  width: 100%;
+  margin-top: var(--space-3);
+  padding: var(--space-2);
+  background: transparent;
+  border: var(--border-width) solid var(--color-border);
+  border-radius: var(--radius-sm);
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  font-size: var(--font-size-xs);
+  transition: background-color var(--transition-fast), border-color var(--transition-fast);
+}
+
+.clearBtn:hover {
+  border-color: var(--color-text-muted);
+  background: var(--color-surface-hover);
+}
