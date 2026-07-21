@@ -35,11 +35,11 @@ export function Sidebar({
       </button>
 
       <div className={styles.scroll}>
-        <Section title="Tema">
+        <Section title="Tema" defaultOpen={false}>
           <ThemeToggle />
         </Section>
 
-        <Section title="Biblioteca de Modelos">
+        <Section title="Biblioteca de Modelos" defaultOpen={false}>
           <ModelGallery onOpenUrl={onOpenUrl} />
         </Section>
 
@@ -48,23 +48,23 @@ export function Sidebar({
           <LoadModelUrlInput onOpenUrl={onOpenUrl} />
         </Section>
 
-        <Section title="Capas">
+        <Section title="Capas" defaultOpen={false}>
           <LayerPanel />
         </Section>
 
-        <Section title="Controles">
+        <Section title="Controles" defaultOpen={false}>
           <ViewButtons />
         </Section>
 
-        <Section title="Modo de Vista">
+        <Section title="Modo de Vista" defaultOpen={false}>
           <DisplayModeButtons />
         </Section>
 
-        <Section title="Visualizacion">
+        <Section title="Visualizacion" defaultOpen={false}>
           <DisplayOptions />
         </Section>
 
-        <Section title="Medicion">
+        <Section title="Medicion" defaultOpen={false}>
           <MeasurePanel
             onRemoveMeasurement={onRemoveMeasurement}
             onClearMeasurements={onClearMeasurements}

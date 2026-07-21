@@ -61,7 +61,7 @@ export const useViewerStore = create<ViewerState>((set) => ({
   viewRequest: null,
   displayMode: "shaded",
   showGrid: true,
-  showEdges: false,
+  showEdges: true,
   sidebarVisible: true,
   measureMode: false,
   measurements: [],
