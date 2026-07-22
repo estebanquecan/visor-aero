@@ -5,7 +5,7 @@ export interface Model3D {
   category: string;
   description: string;
   thumbnail: string;
-  /** Archivo que el visor carga al seleccionar el modelo (hoy, un .3dm). */
+  /** Archivo que el visor carga al seleccionar el modelo (.3dm, .glb o .gltf). */
   viewer: string;
   /** Archivo .3dm que se ofrece para descarga directa. */
   download: string;

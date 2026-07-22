@@ -1,6 +1,15 @@
 import { loadRhinoModel } from "./rhinoLoader";
+import { loadGlbModel } from "./glbLoader";
 import { useViewerStore } from "@/store/viewerStore";
 import type { ViewerScene } from "@/viewer/ViewerScene";
+
+const GLB_EXTENSIONS = [".glb", ".gltf"];
+export const SUPPORTED_EXTENSIONS = [".3dm", ...GLB_EXTENSIONS];
+
+function isGlbFile(fileName: string): boolean {
+  const lower = fileName.toLowerCase();
+  return GLB_EXTENSIONS.some((ext) => lower.endsWith(ext));
+}
 
 /** Parsea el buffer, lo carga en la escena y publica sus metadatos en el store. */
 async function loadModelBuffer(
@@ -9,7 +18,9 @@ async function loadModelBuffer(
   scene: ViewerScene,
 ): Promise<void> {
   const store = useViewerStore.getState();
-  const model = await loadRhinoModel(buffer);
+  const model = isGlbFile(fileName)
+    ? await loadGlbModel(buffer)
+    : await loadRhinoModel(buffer);
   scene.setModel(model);
   store.loadModel({ fileName, layers: model.layers });
 }
@@ -25,8 +36,9 @@ export async function openModelFile(
 ): Promise<void> {
   const store = useViewerStore.getState();
 
-  if (!file.name.toLowerCase().endsWith(".3dm")) {
-    store.setError("El archivo debe tener extension .3dm");
+  const lowerName = file.name.toLowerCase();
+  if (!SUPPORTED_EXTENSIONS.some((ext) => lowerName.endsWith(ext))) {
+    store.setError("El archivo debe tener extension .3dm, .glb o .gltf");
     return;
   }
 

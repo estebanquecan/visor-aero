@@ -1,55 +1,36 @@
-.card {
-  display: flex;
-  flex-direction: column;
-  border: var(--border-width) solid var(--color-border);
-  border-radius: var(--radius-sm);
-  overflow: hidden;
-  background: var(--color-surface);
-}
-
-.thumbBtn {
-  display: block;
-  width: 100%;
-  padding: 0;
-  border: none;
-  border-bottom: var(--border-width) solid var(--color-border);
-  background: var(--color-surface-hover);
-  cursor: pointer;
-}
-
-.thumbBtn:disabled {
-  cursor: default;
-  opacity: 0.6;
-}
-
-.thumb {
-  display: block;
-  width: 100%;
-  height: 120px;
-  object-fit: cover;
-}
-
-.thumbFallback {
+.row {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  gap: var(--space-2);
   width: 100%;
-  height: 120px;
-  padding: 0 var(--space-3);
-  text-align: center;
-  font-size: var(--font-size-xs);
-  color: var(--color-text-muted);
+  padding: var(--space-2) var(--space-3);
+  border: var(--border-width) solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: var(--color-surface);
+  cursor: pointer;
+  text-align: left;
+  transition: background var(--transition-fast);
+}
+
+.row:hover {
+  background: var(--color-surface-hover);
+}
+
+.row:disabled {
+  cursor: default;
+  opacity: 0.6;
+  background: var(--color-surface);
 }
 
 .info {
   display: flex;
   flex-direction: column;
-  gap: var(--space-1);
-  padding: var(--space-2) var(--space-3);
+  gap: 2px;
+  min-width: 0;
 }
 
 .name {
-  margin: 0;
   font-size: var(--font-size-sm);
   font-weight: 600;
   color: var(--color-text);
@@ -59,49 +40,12 @@
 }
 
 .category {
-  margin: 0;
   font-size: var(--font-size-xs);
   color: var(--color-text-secondary);
 }
 
-.description {
-  margin: 0;
+.action {
+  flex-shrink: 0;
   font-size: var(--font-size-xs);
   color: var(--color-text-muted);
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-}
-
-.tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-1);
-}
-
-.tag {
-  font-size: var(--font-size-xs);
-  color: var(--color-text-secondary);
-  background: var(--color-surface-hover);
-  border-radius: var(--radius-sm);
-  padding: 2px var(--space-1);
-}
-
-.downloadBtn {
-  display: block;
-  margin: 0 var(--space-3) var(--space-3);
-  padding: var(--space-2) var(--space-3);
-  border: var(--border-width) solid var(--btn-secondary-border);
-  border-radius: var(--radius-sm);
-  background: var(--btn-secondary-bg);
-  color: var(--btn-secondary-text);
-  font-size: var(--font-size-xs);
-  text-align: center;
-  text-decoration: none;
-  transition: background var(--transition-fast);
-}
-
-.downloadBtn:hover {
-  background: var(--color-surface-hover);
 }

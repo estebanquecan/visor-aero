@@ -40,8 +40,8 @@ export function LoadModelUrlInput({ onOpenUrl }: LoadModelUrlInputProps) {
         </button>
       </div>
       <p className={styles.hint}>
-        Debe ser un enlace directo al archivo .3dm. En GitHub, usa el boton
-        &quot;Raw&quot; del archivo (no la URL de la pagina).
+        Debe ser un enlace directo al archivo .3dm, .glb o .gltf. En GitHub,
+        usa el boton &quot;Raw&quot; del archivo (no la URL de la pagina).
       </p>
     </form>
   );

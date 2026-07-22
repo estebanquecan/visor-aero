@@ -27,12 +27,12 @@ export function LoadModelButton({ onOpenFile }: LoadModelButtonProps) {
         onClick={() => inputRef.current?.click()}
         disabled={isLoading}
       >
-        {isLoading ? "Cargando..." : "Seleccionar Archivo .3dm"}
+        {isLoading ? "Cargando..." : "Seleccionar Archivo 3D"}
       </button>
       <input
         ref={inputRef}
         type="file"
-        accept=".3dm"
+        accept=".3dm,.glb,.gltf"
         onChange={handleChange}
         className={styles.hiddenInput}
       />
