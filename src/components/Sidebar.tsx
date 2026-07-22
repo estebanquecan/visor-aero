@@ -1,7 +1,6 @@
 import { Section } from "./Section";
 import { ThemeToggle } from "./ThemeToggle";
 import { LoadModelButton } from "./LoadModelButton";
-import { LoadModelUrlInput } from "./LoadModelUrlInput";
 import { ModelGallery } from "./ModelGallery";
 import { LayerPanel } from "./LayerPanel";
 import { ViewButtons } from "./ViewButtons";
@@ -45,7 +44,6 @@ export function Sidebar({
 
         <Section title="Cargar Modelo" defaultOpen={false}>
           <LoadModelButton onOpenFile={onOpenFile} />
-          <LoadModelUrlInput onOpenUrl={onOpenUrl} />
         </Section>
 
         <Section title="Capas" defaultOpen={false}>
