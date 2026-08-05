@@ -8,5 +8,15 @@
     "viewer": "/rhino/Guia%20policia.3dm",
     "download": "/rhino/Guia%20policia.3dm",
     "tags": []
+  },
+  {
+    "id": "a-2125-muneco",
+    "name": "A-2125 Muñeco, Organico, Snack disfraz verde",
+    "category": "General",
+    "description": "",
+    "thumbnail": "/thumbnails/a-2125-muneco.webp",
+    "viewer": "/rhino/A-2125%20Mu%C3%B1eco,%20Organico,%20Snack%20disfraz%20verde.3dm",
+    "download": "/rhino/A-2125%20Mu%C3%B1eco,%20Organico,%20Snack%20disfraz%20verde.3dm",
+    "tags": []
   }
 ]
