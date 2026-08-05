@@ -59,7 +59,7 @@ export const useViewerStore = create<ViewerState>((set) => ({
   isLoading: false,
   error: null,
   viewRequest: null,
-  displayMode: "shaded",
+  displayMode: "ghosted",
   showGrid: true,
   showEdges: true,
   sidebarVisible: true,
