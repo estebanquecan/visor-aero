@@ -4,3 +4,6 @@ dist
 *.local
 *.tsbuildinfo
 Imput
+
+.vercel
+.env*
