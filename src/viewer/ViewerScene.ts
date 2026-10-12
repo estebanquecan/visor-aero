@@ -206,6 +206,10 @@ export class ViewerScene {
     this.objectMap = model.objectMap;
     this.scene.add(model.group);
 
+    const layerColorById = new Map<string, THREE.Color>(
+      model.layers.map((layer) => [layer.id, new THREE.Color(layer.color)]),
+    );
+
     this.selectableObjects = [];
     model.objectMap.forEach((object, id) => {
       this.selectableObjects.push(object);
@@ -214,9 +218,9 @@ export class ViewerScene {
         const original = object.material as THREE.Material & {
           color?: THREE.Color;
         };
-        const baseColor = original.color
-          ? original.color.clone()
-          : new THREE.Color(0xaaaaaa);
+        const layerId = object.userData.layerId as string | undefined;
+        const layerColor = layerId ? layerColorById.get(layerId) : undefined;
+        const baseColor = (layerColor ?? original.color)?.clone() ?? new THREE.Color(0xaaaaaa);
         original.dispose?.();
 
         const edgesGeometry = new THREE.EdgesGeometry(
